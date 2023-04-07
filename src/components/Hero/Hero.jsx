@@ -1,4 +1,4 @@
-import { Box, styled, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { Container } from '@mui/system';
 
 import BackImg from '../../assets/khersoncleanup.jpg';
