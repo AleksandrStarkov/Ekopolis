@@ -19,14 +19,14 @@ import NavMenu2 from './NavMenu2';
 // }
 
 export default function NavTabs() {
-  const [value, setValue] = React.useState(0);
+  // const [value, setValue] = React.useState(0);
 
   // const handleChange = (event, newValue) => {
   //   setValue(newValue);
   // };
-  React.useEffect(() => {
-    localStorage.setItem('selectedTab', value.toString());
-  }, [value]);
+  // React.useEffect(() => {
+  //   localStorage.setItem('selectedTab', value.toString());
+  // }, [value]);
 
   return (
     // <>
