@@ -41,11 +41,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <NavBar
-        isAuth={isAuth}
-        checkAuth={checkAuth}
-        style={{ position: 'none' }}
-      />
+      <NavBar isAuth={isAuth} checkAuth={checkAuth} />
 
       <Routes>
         <Route path="/" element={<Hero />} />

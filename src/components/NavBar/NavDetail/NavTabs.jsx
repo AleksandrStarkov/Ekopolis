@@ -2,7 +2,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 // import Tabs from '@mui/material/Tabs';
 // import Tab from '@mui/material/Tab';
-import { Link } from '@mui/material';
+// import { Link } from '@mui/material';
+import { Link } from 'react-router-dom';
 import NavMenu from './NavMenu';
 import NavMenu2 from './NavMenu2';
 
@@ -50,7 +51,9 @@ export default function NavTabs() {
           padding: '6px 8px',
         }}
         label="ГОЛОВНА"
-        href="/"
+        // href="/"
+        // component={Link}
+        to="/"
       >
         ГОЛОВНА
       </Link>
@@ -62,8 +65,9 @@ export default function NavTabs() {
           color: ' rgb(0, 0, 0)',
           padding: '6px 8px',
         }}
-        label="ДЛЯ НАСЕЛЕННЯ"
-        href="/Population"
+        // label="ДЛЯ НАСЕЛЕННЯ"
+        // href="/population"
+        to="/population"
       >
         ДЛЯ НАСЕЛЕННЯ
       </Link>
@@ -76,8 +80,9 @@ export default function NavTabs() {
           color: ' rgb(0, 0, 0)',
           padding: '6px 8px',
         }}
-        label="ДЛЯ НАСЕЛЕННЯ"
-        href="/information"
+        // label="ДЛЯ НАСЕЛЕННЯ"
+        // href="/information"
+        to="/information"
       >
         ПУБЛІЧНА ІНФОРМАЦІЯ
       </Link>
@@ -87,8 +92,9 @@ export default function NavTabs() {
           color: ' rgb(0, 0, 0)',
           padding: '6px 8px',
         }}
-        label="ДЛЯ НАСЕЛЕННЯ"
-        href="/news"
+        // label="ДЛЯ НАСЕЛЕННЯ"
+        // href="/news"
+        to="/news"
       >
         НОВИНИ
       </Link>
@@ -99,7 +105,8 @@ export default function NavTabs() {
           padding: '6px 8px',
         }}
         label="ДЛЯ НАСЕЛЕННЯ"
-        href="/contacts"
+        // href="/contacts"
+        to="/contacts"
       >
         КОНТАКТИ
       </Link>
