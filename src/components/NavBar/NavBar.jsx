@@ -8,7 +8,7 @@ import {
   Typography,
   styled,
 } from '@mui/material';
-import { ImgClose } from './NavBar.styled';
+// import { ImgClose } from './NavBar.styled';
 
 import wind from '../../assets/Windsurfing.png';
 import NavTabs from './NavDetail/NavTabs';
@@ -55,8 +55,8 @@ export default function NavBar() {
               // backgroundAttachment: 'fixed',
               backgroundPosition: 'center',
               backgroundSize: 'cover',
-              height: '100px',
-              width: '100px',
+              // height: '100px',
+              // width: '100px',
               // minHeight: '80vh',
             }}
           >

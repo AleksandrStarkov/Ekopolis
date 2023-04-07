@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+// import Tabs from '@mui/material/Tabs';
+// import Tab from '@mui/material/Tab';
 import { Link } from '@mui/material';
 import NavMenu from './NavMenu';
 import NavMenu2 from './NavMenu2';
@@ -21,9 +21,9 @@ import NavMenu2 from './NavMenu2';
 export default function NavTabs() {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  // const handleChange = (event, newValue) => {
+  //   setValue(newValue);
+  // };
   React.useEffect(() => {
     localStorage.setItem('selectedTab', value.toString());
   }, [value]);
