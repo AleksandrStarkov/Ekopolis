@@ -1,15 +1,9 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-import {
-  Link,
-  Grow,
-  Paper,
-  Popper,
-  MenuItem,
-  MenuList,
-  Stack,
-} from '@mui/material';
+import { Grow, Paper, Popper, MenuItem, MenuList, Stack } from '@mui/material';
+
+import { Link } from 'react-router-dom';
 
 export default function MenuListComposition() {
   const [open, setOpen] = React.useState(false);
@@ -101,8 +95,9 @@ export default function MenuListComposition() {
                           lineHeight: '1.75',
                           letterSpacing: '0.02857em',
                         }}
-                        label="ПРО НАС"
-                        href="/about"
+                        // label="ПРО НАС"
+                        // href="/about"
+                        to="about"
                       >
                         ПРО НАС
                       </Link>
@@ -119,8 +114,9 @@ export default function MenuListComposition() {
                           lineHeight: '1.75',
                           letterSpacing: '0.02857em',
                         }}
-                        label="ДІЯЛЬНІСТЬ"
-                        href="/activity"
+                        // label="ДІЯЛЬНІСТЬ"
+                        // href="/activity"
+                        to="activity"
                       >
                         ДІЯЛЬНІСТЬ
                       </Link>
@@ -137,8 +133,9 @@ export default function MenuListComposition() {
                           lineHeight: '1.75',
                           letterSpacing: '0.02857em',
                         }}
-                        label="КЕРІВНИЦТВО"
-                        href="/management"
+                        // label="КЕРІВНИЦТВО"
+                        // href="/management"
+                        to="management"
                       >
                         КЕРІВНИЦТВО
                       </Link>
@@ -155,8 +152,9 @@ export default function MenuListComposition() {
                           lineHeight: '1.75',
                           letterSpacing: '0.02857em',
                         }}
-                        label="СТРУКТУРА "
-                        href="/structure"
+                        // label="СТРУКТУРА "
+                        // href="/structure"
+                        to="structure"
                       >
                         СТРУКТУРА
                       </Link>
@@ -173,8 +171,9 @@ export default function MenuListComposition() {
                           lineHeight: '1.75',
                           letterSpacing: '0.02857em',
                         }}
-                        label="ВАКАНСІЇ"
-                        href="/vacancies"
+                        // label="ВАКАНСІЇ"
+                        // href="/vacancies"
+                        to="vacancies"
                       >
                         ВАКАНСІЇ
                       </Link>

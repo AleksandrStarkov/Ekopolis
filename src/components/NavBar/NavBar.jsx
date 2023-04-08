@@ -1,13 +1,6 @@
 import * as React from 'react';
-import {
-  AppBar,
-  Toolbar,
-  Stack,
-  Link,
-  Box,
-  Typography,
-  styled,
-} from '@mui/material';
+import { AppBar, Toolbar, Stack, Box, Typography, styled } from '@mui/material';
+import { Link } from 'react-router-dom';
 // import { ImgClose } from './NavBar.styled';
 
 import wind from '../../assets/Windsurfing.png';
@@ -43,8 +36,8 @@ export default function NavBar() {
           }}
         >
           <Link
-            href="/"
-            underline="none"
+            to="/"
+            // underline="none"
             style={{
               display: 'flex',
               alignItems: 'center',

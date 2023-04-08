@@ -36,7 +36,7 @@ export default function NavTabs() {
           color: ' rgb(0, 0, 0)',
           padding: '6px 8px',
         }}
-        label="ГОЛОВНА"
+        // label="ГОЛОВНА"
         // href="/"
         // component={Link}
         to="/"
@@ -53,7 +53,7 @@ export default function NavTabs() {
         }}
         // label="ДЛЯ НАСЕЛЕННЯ"
         // href="/population"
-        to="/population"
+        to="population"
       >
         ДЛЯ НАСЕЛЕННЯ
       </Link>
@@ -68,7 +68,7 @@ export default function NavTabs() {
         }}
         // label="ДЛЯ НАСЕЛЕННЯ"
         // href="/information"
-        to="/information"
+        to="information"
       >
         ПУБЛІЧНА ІНФОРМАЦІЯ
       </Link>
@@ -80,7 +80,7 @@ export default function NavTabs() {
         }}
         // label="ДЛЯ НАСЕЛЕННЯ"
         // href="/news"
-        to="/news"
+        to="news"
       >
         НОВИНИ
       </Link>
@@ -90,7 +90,7 @@ export default function NavTabs() {
           color: ' rgb(0, 0, 0)',
           padding: '6px 8px',
         }}
-        label="ДЛЯ НАСЕЛЕННЯ"
+        // label="ДЛЯ НАСЕЛЕННЯ"
         // href="/contacts"
         to="/contacts"
       >

@@ -1,15 +1,8 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-import {
-  Link,
-  Grow,
-  Paper,
-  Popper,
-  MenuItem,
-  MenuList,
-  Stack,
-} from '@mui/material';
+import { Grow, Paper, Popper, MenuItem, MenuList, Stack } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function MenuListComposition() {
   const [open, setOpen] = React.useState(false);
@@ -108,8 +101,9 @@ export default function MenuListComposition() {
                           letterSpacing: '0.02857em',
                           padding: '7px',
                         }}
-                        label="УКЛАСТИ ДОГОВІР"
-                        href="/Agreement"
+                        // label="УКЛАСТИ ДОГОВІР"
+                        // href="/Agreement"
+                        to="agreement"
                       >
                         УКЛАСТИ ДОГОВІР
                       </Link>
@@ -133,8 +127,9 @@ export default function MenuListComposition() {
                           color: ' rgb(0, 0, 0)',
                           padding: '7px',
                         }}
-                        label="ТАРИФИ"
-                        href="/rates"
+                        // label="ТАРИФИ"
+                        // href="/rates"
+                        to="rates"
                       >
                         ТАРИФИ
                       </Link>
