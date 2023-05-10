@@ -1,15 +1,23 @@
 {
   "files": {
     "main.css": "/Ekopolis/static/css/main.7acaea2f.css",
-    "main.js": "/Ekopolis/static/js/main.8057e183.js",
-    "static/media/khersoncleanup.jpg": "/Ekopolis/static/media/khersoncleanup.892a517a83c00a3f4258.jpg",
-    "static/media/Windsurfing.png": "/Ekopolis/static/media/Windsurfing.0f11382e430f137d7c9d.png",
+    "main.js": "/Ekopolis/static/js/main.90211442.js",
+    "static/media/khersoncleanup.jpg": "/Ekopolis/static/media/khersoncleanup.d34a4aab7509f9e6d0b1.jpg",
+    "static/media/clean1.jpg": "/Ekopolis/static/media/clean1.d69fd853a079b18a2451.jpg",
+    "static/media/clean2.jpg": "/Ekopolis/static/media/clean2.55111ef7d77288be7de4.jpg",
+    "static/media/clean3.jpg": "/Ekopolis/static/media/clean3.fce3c9c13e81e07c5bd6.jpg",
+    "static/media/kherson.jpg": "/Ekopolis/static/media/kherson.330cc0defdcd98f7634c.jpg",
+    "static/media/DJI_0610-328.jpg": "/Ekopolis/static/media/DJI_0610-328.5a645a138695507ecb7f.jpg",
+    "static/media/kherson11.jpeg": "/Ekopolis/static/media/kherson11.5678b549e16804bb2419.jpeg",
+    "static/media/logo.png": "/Ekopolis/static/media/logo.2351b0568e22608a4c15.png",
+    "static/media/logo4.png": "/Ekopolis/static/media/logo4.f01cfcd8790826d229cc.png",
+    "static/media/flag.jpg": "/Ekopolis/static/media/flag.8077d6a4c3222ad3f139.jpg",
     "index.html": "/Ekopolis/index.html",
     "main.7acaea2f.css.map": "/Ekopolis/static/css/main.7acaea2f.css.map",
-    "main.8057e183.js.map": "/Ekopolis/static/js/main.8057e183.js.map"
+    "main.90211442.js.map": "/Ekopolis/static/js/main.90211442.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.8057e183.js"
+    "static/js/main.90211442.js"
   ]
 }
