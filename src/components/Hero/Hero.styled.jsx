@@ -1,22 +1,15 @@
 import styled from '@emotion/styled';
-import { device } from 'utils/device';
+// import { device } from 'utils/device';
 
 export const HeroTitle = styled.h1`
   padding: 0 20px;
   position: relative;
   z-index: 1;
-  /* font-family: ${({ theme }) => theme.fonts.main};
-  font-weight: ${({ theme }) => theme.fontWeights.bold};
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  line-height: ${({ theme }) => theme.lineHeights.body};
-  color: ${({ theme }) => theme.colors.black};
-  @media ${device.tablet} {
-    padding: 0 0 0 32px;
-    max-width: 600px;
-    font-size: ${({ theme }) => theme.fontSizes.xxxl};
-    line-height: ${({ theme }) => theme.lineHeights.hero};
-  }
-  @media ${device.desktop} {
-    padding: 0 0 0 16px;
-  } */
+`;
+export const ImgBack = styled.img`
+  margin-top: 100px;
+  width: 450px;
+  height: 300px;
+  /* color: green; */
+  /* margin-right: 100px; */
 `;

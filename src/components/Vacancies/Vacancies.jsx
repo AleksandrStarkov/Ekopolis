@@ -1,7 +1,7 @@
 import { Box, styled, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 
-// import BackImg5 from '../../assets/icons/15.jpeg';
+import BackImg2 from '../../assets/khersoncleanup.jpg';
 
 export default function About() {
   const CustomBox = styled(Box)(({ theme }) => ({
@@ -27,48 +27,43 @@ export default function About() {
   }));
 
   return (
-    <Container>
-      <CustomBox
+    <Box
+      sx={{
+        // backgroundImage: `url(${BackImg2})`,
+        backgroundImage: `linear-gradient(to right, rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)),url(${BackImg2})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        height: 'calc(100vh - 134px)',
+
+        // backgroundColor: ' rgba(242, 249, 242, 0.73)',
+        // backdropFilter: 'blur(6px)',
+        animation: 'change 10s infinite ease-in-out',
+      }}
+    >
+      <Container
         style={{
-          padding: '70px 20px',
-          margin: '0',
+          paddingTop: '250px',
+          display: 'flex',
+          justifyContent: 'center',
         }}
       >
-        {/* <Box sx={{ flex: '1.25' }}>
-          <img
-            src={BackImg5}
-            alt="heroImg"
-            style={{ maxWidth: '100%', marginBottom: '2rem' }}
-          />
-        </Box> */}
-        <Box sx={{ flex: '1' }}>
-          <Typography
-            variant="body2"
-            sx={{
-              fontSize: '32px',
-              color: '#2b6de6',
-              fontWeight: '500',
-            }}
-          >
-            navbar.aloha
-          </Typography>
-          <Title variant="h2" style={{ fontSize: '50px' }}>
-            home.title5
-          </Title>
-          <Typography
-            variant="body2"
-            sx={{ fontSize: '18px', color: '#5A6473', my: 4 }}
-          >
-            home.title10
-          </Typography>
-        </Box>
-      </CustomBox>
-      <Typography variant="body2" sx={{ fontSize: '18px', color: '#5A6473' }}>
-        Windsurfing club provides services: windsurfing equipment rental
-        sailboarding instruction windsurfing equipment sales storage of personal
-        windsurfing equipment equipment repair We will be glad to see you in
-        Kiev windsurfing club Windsurf!
-      </Typography>
-    </Container>
+        <Typography
+          variant="body2"
+          sx={{
+            fontSize: '24px',
+            color: '#030303',
+            background: '#ffffffde',
+            // width: '100wv',
+            padding: '30px',
+            // boxShadow: '0px 4px 20px #d0d7de',
+            borderRadius: '12px',
+          }}
+        >
+          На даний момент вакансії відсутні
+        </Typography>
+      </Container>
+    </Box>
   );
 }

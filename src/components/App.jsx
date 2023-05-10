@@ -1,7 +1,7 @@
 import { createTheme, ThemeProvider } from '@mui/material';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import Hero from './Hero/Hero';
 import About from './About/About';
@@ -20,30 +20,23 @@ import Contacts from './Contacts/Contacts';
 const darkTheme = createTheme({
   palette: {
     mode: 'light',
+    primary: {
+      main: '#ffffff',
+    },
   },
 });
 
+// color="primary" enableColorOnDark
+
 function App() {
-  const [isAuth, setIsAuth] = useState(false);
-
-  const checkAuth = data => {
-    setIsAuth(data);
-  };
-
-  useEffect(() => {
-    const auth = JSON.parse(localStorage.getItem('persist:auth') || '');
-
-    if (auth.login !== 'null') {
-      setIsAuth(true);
-    }
-  }, []);
-
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <NavBar isAuth={isAuth} checkAuth={checkAuth} />
-
+      <NavBar />
+      {/* <TestNavBar /> */}
+      {/* <Header /> */}
       <Routes>
+        {/* <Route path="/" element={<Hero />}> */}
         <Route path="/" element={<Hero />} />
         <Route path="about" element={<About />} />
         <Route path="activity" element={<Activity />} />
@@ -57,6 +50,7 @@ function App() {
         <Route path="contacts" element={<Contacts />} />
         <Route path="news" element={<News />} />
         <Route path="*" element={<Navigate to="/" />} />
+        {/* </Route> */}
       </Routes>
     </ThemeProvider>
   );

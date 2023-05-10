@@ -1,74 +1,80 @@
-import { Box, styled, Typography } from '@mui/material';
-import { Container } from '@mui/system';
+import * as React from 'react';
+// import { experimentalStyled as styled } from '@mui/material/styles';
+// import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import { Box, Container } from '@mui/material';
+import CardStructure from './CardStructure';
+import BackImg2 from '../../assets/clean1.jpg';
+// import { margin } from '@mui/system';
 
-// import BackImg5 from '../../assets/icons/15.jpeg';
+// const Item = styled(Paper)(({ theme }) => ({
+//   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+//   ...theme.typography.body2,
+//   padding: theme.spacing(2),
+//   textAlign: 'center',
+//   color: theme.palette.text.secondary,
+// }));
+function createData(position, name) {
+  return { position, name };
+}
 
-export default function About() {
-  const CustomBox = styled(Box)(({ theme }) => ({
-    display: 'flex',
-    justifyContent: 'center',
-    gap: theme.spacing(5),
-    marginTop: theme.spacing(3),
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
-      alignItems: 'center',
-      textAlign: 'center',
-    },
-  }));
+const rows = [
+  createData('Директор ', 'Коваль Володимир Валерійович'),
+  createData('Заступник директора по розвитку', 'Данилов Володимир Вікторович'),
+  createData('Головний бухгалтер ', 'Ільницький Борис Іванович '),
+  createData('Економіст ', 'Бідножевська Тетяна Леонідівна'),
+  createData('Діловод', 'Зелінська Олена Сергіівна'),
+  // createData('Діловод', 'Зелінська Олена Сергіівна'),
+];
 
-  const Title = styled(Typography)(({ theme }) => ({
-    fontSize: '64px',
-    color: '#000336',
-    fontWeight: 'bold',
-    margin: theme.spacing(4, 0, 4, 0),
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '40px',
-    },
-  }));
-
+export default function CustomizedTables() {
   return (
-    <Container>
-      <CustomBox
+    <Box
+      sx={{
+        backgroundImage: `linear-gradient(to right, rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)),url(${BackImg2})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+
+        // backgroundColor: ' rgba(242, 249, 242, 0.73)',
+        // backdropFilter: 'blur(6px)',
+        // animation: 'change 10s infinite ease-in-out',
+      }}
+    >
+      <Container
         style={{
-          padding: '70px 20px',
-          margin: '0',
+          paddingTop: '50px',
+          paddingBottom: '50px',
+          display: 'flex',
+
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
-        {/* <Box sx={{ flex: '1.25' }}>
-          <img
-            src={BackImg5}
-            alt="heroImg"
-            style={{ maxWidth: '100%', marginBottom: '2rem' }}
-          />
-        </Box> */}
-        <Box sx={{ flex: '1' }}>
-          <Typography
-            variant="body2"
-            sx={{
-              fontSize: '32px',
-              color: '#2b6de6',
-              fontWeight: '500',
+        <Box sx={{ flexGrow: 1, width: '100%' }}>
+          <Grid
+            container
+            spacing={{ xs: 2, md: 3 }}
+            columns={{ xs: 2, sm: 4, md: 8 }}
+            sx={{ height: '100vh' }}
+            style={{
+              justifyContent: 'center',
+              margin: '0',
+              width: 'auto',
+              height: '100%',
             }}
           >
-            navbar.aloha
-          </Typography>
-          <Title variant="h2" style={{ fontSize: '50px' }}>
-            home.title5
-          </Title>
-          <Typography
-            variant="body2"
-            sx={{ fontSize: '18px', color: '#5A6473', my: 4 }}
-          >
-            home.title9
-          </Typography>
+            {rows.map((row, index) => (
+              <Grid item sm={2} xs={3} md={2.4} key={index}>
+                {/* <Item> */}
+                <CardStructure name={row.name} position={row.position} />
+                {/* </Item> */}
+              </Grid>
+            ))}
+          </Grid>
         </Box>
-      </CustomBox>
-      <Typography variant="body2" sx={{ fontSize: '18px', color: '#5A6473' }}>
-        Windsurfing club provides services: windsurfing equipment rental
-        sailboarding instruction windsurfing equipment sales storage of personal
-        windsurfing equipment equipment repair We will be glad to see you in
-        Kiev windsurfing club Windsurf!
-      </Typography>
-    </Container>
+      </Container>
+    </Box>
   );
 }

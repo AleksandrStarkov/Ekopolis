@@ -1,18 +1,23 @@
 import React from 'react';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Typed from 'typed.js';
 
 import { Box, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 
-import BackImg from '../../assets/khersoncleanup.jpg';
+// import BackImg1 from '../../assets/clean1.jpg';
+import images from './data';
+
+import { ImgBack } from './Hero.styled';
+import flag from '../../assets/flag.jpg';
 
 const Hero = () => {
   const el = useRef(null);
+  const [curentState, setCurentState] = useState(0);
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['КОМУНАЛЬНЕ ПІДПРИЄМСТВО «ЕКОПОЛІС» ХЕРСОНСЬКОЇ МІСЬКОЇ РАДИ.'],
+      strings: ['ХЕРСОН - ЦЕ УКРАЇНА!'],
       typeSpeed: 100,
       showCursor: false,
     });
@@ -21,6 +26,18 @@ const Hero = () => {
       typed.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (curentState === 2) {
+        setCurentState(0);
+      } else {
+        setCurentState(curentState + 1);
+      }
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [curentState]);
+
   // const Title = styled(Typography)(({ theme }) => ({
   //   fontSize: '64px',
   //   color: '#000336',
@@ -32,51 +49,54 @@ const Hero = () => {
   // }));
 
   return (
-    <>
-      <Box
-        sx={{
-          backgroundImage: `url(${BackImg})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          height: '100vh',
-          width: '100%',
-          minHeight: '80vh',
+    <Box
+      sx={{
+        backgroundImage: `url(${images[curentState].url})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        height: 'calc(100vh - 134px)',
+        // width: '100vw',
+        // minHeight: '80vh',
+        backgroundColor: ' rgba(242, 249, 242, 0.73)',
+        backdropFilter: 'blur(6px)',
+        transition: '1500ms all ease-in-out',
+        // animation: '3s linear 1s slidein',
+      }}
+    >
+      <Container
+        style={{
+          paddingTop: '50px',
         }}
       >
-        <Container style={{ paddingTop: '200px' }}>
-          <Box
-            sx={{ flex: '1' }}
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              // border: '2px solid rgba(14, 1, 1, 0.5)',
-              // borderRadius: '5px',
-              background: '#9324e746',
-              padding: '2px',
-              width: '1000px',
-              height: '300px',
-              // boxShadow: '0 0 15px rgb(191, 2, 248)',
+        <Box
+          sx={{ flex: '1' }}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+
+            padding: '2px',
+          }}
+        >
+          <Typography
+            ref={el}
+            variant="body2"
+            sx={{
+              fontSize: '50px',
+              color: '#060606',
+              fontWeight: '500',
+              backgroundColor: '  rgb(244 253 86 / 73%)',
+              backdropFilter: 'blur(6px)',
+              width: 'fit-content',
+              padding: '5px',
+              borderRadius: '12px',
             }}
-          >
-            <Typography
-              ref={el}
-              variant="body2"
-              sx={{
-                fontSize: '50px',
-                color: '#060606',
-                fontWeight: '500',
-              }}
-            >
-              'home.title'
-            </Typography>
-          </Box>
-        </Container>
-      </Box>
-      {/* <Main /> */}
-    </>
+          ></Typography>
+          <ImgBack src={flag} alt="" />
+        </Box>
+      </Container>
+    </Box>
   );
 };
 

@@ -1,74 +1,113 @@
-import { Box, styled, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { Container } from '@mui/system';
+import BackImg2 from '../../assets/DJI_0610-328.jpg';
 
-// import BackImg5 from '../../assets/icons/15.jpeg';
+import PinDropTwoToneIcon from '@mui/icons-material/PinDropTwoTone';
+import MailTwoToneIcon from '@mui/icons-material/MailTwoTone';
+import CalendarMonthTwoToneIcon from '@mui/icons-material/CalendarMonthTwoTone';
 
-export default function About() {
-  const CustomBox = styled(Box)(({ theme }) => ({
-    display: 'flex',
-    justifyContent: 'center',
-    gap: theme.spacing(5),
-    marginTop: theme.spacing(3),
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
-      alignItems: 'center',
-      textAlign: 'center',
-    },
-  }));
-
-  const Title = styled(Typography)(({ theme }) => ({
-    fontSize: '64px',
-    color: '#000336',
-    fontWeight: 'bold',
-    margin: theme.spacing(4, 0, 4, 0),
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '40px',
-    },
-  }));
-
+export default function Activity() {
   return (
-    <Container>
-      <CustomBox
+    <Box
+      sx={{
+        backgroundImage: `url(${BackImg2})`,
+        backgroundImage: `linear-gradient(to right, rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)),url(${BackImg2})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        height: 'calc(100vh - 134px)',
+        // width: '100%',
+        // minHeight: '80vh',
+        backgroundColor: ' rgba(242, 249, 242, 0.73)',
+        backdropFilter: 'blur(6px)',
+        animation: 'change 10s infinite ease-in-out',
+      }}
+    >
+      <Container
         style={{
-          padding: '70px 20px',
-          margin: '0',
+          paddingTop: '100px',
+          display: 'flex',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          alignItems: 'center',
+          // background: '#ffffffde',
         }}
       >
-        {/* <Box sx={{ flex: '1.25' }}>
-          <img
-            src={BackImg5}
-            alt="heroImg"
-            style={{ maxWidth: '100%', marginBottom: '2rem' }}
-          />
-        </Box> */}
-        <Box sx={{ flex: '1' }}>
+        <Box
+          style={{
+            // margin: '20px',
+            background: '#ffffffde',
+            minWidth: '350px',
+            padding: '30px',
+            // boxShadow: '0px 4px 20px #d0d7de',
+            borderRadius: '12px',
+          }}
+        >
           <Typography
             variant="body2"
             sx={{
-              fontSize: '32px',
-              color: '#2b6de6',
-              fontWeight: '500',
+              fontSize: '30px',
+              color: '#030303',
+              padding: '20px',
+              // background: '#ffffffde',
+              // boxShadow: '0px 4px 20px #d0d7de',
+              borderRadius: '12px',
             }}
           >
-            navbar.aloha
+            КОНТАКТИ
           </Typography>
-          <Title variant="h2" style={{ fontSize: '50px' }}>
-            home.title5
-          </Title>
           <Typography
-            variant="body2"
-            sx={{ fontSize: '18px', color: '#5A6473', my: 4 }}
+            variant="h3"
+            sx={{
+              fontSize: '18px',
+              color: '#030303',
+              // background: '#ffffffde',
+              // boxShadow: '0px 4px 20px #d0d7de',
+              // borderRadius: '12px',
+              padding: '10px',
+              display: 'flex',
+              alignItems: 'center',
+            }}
           >
-            home.title13
+            <PinDropTwoToneIcon style={{ marginRight: '10px' }} />
+            04053, м. Київ, вул. Кудрявська, 23.
+          </Typography>
+          <Typography
+            variant="h4"
+            sx={{
+              fontSize: '18px',
+              color: '#030303',
+              // background: '#ffffffde',
+              // boxShadow: '0px 4px 20px #d0d7de',
+              // borderRadius: '12px',
+              padding: '10px',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <MailTwoToneIcon style={{ marginRight: '10px' }} />
+            info@kks.kiev.ua
+          </Typography>
+          <Typography
+            variant="h5"
+            sx={{
+              fontSize: '18px',
+              color: '#030303',
+              // background: '#ffffffde',
+              // boxShadow: '0px 4px 20px #d0d7de',
+              // borderRadius: '12px',
+              padding: '10px',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <CalendarMonthTwoToneIcon style={{ marginRight: '10px' }} />
+            понеділок-четвер з 8.00 до 17.00 (перерва з 12.00 до 12.45) п’ятниця
+            з 8.00 до 15.45 (перерва з 12:00 до 12:45)
           </Typography>
         </Box>
-      </CustomBox>
-      <Typography variant="body2" sx={{ fontSize: '18px', color: '#5A6473' }}>
-        Windsurfing club provides services: windsurfing equipment rental
-        sailboarding instruction windsurfing equipment sales storage of personal
-        windsurfing equipment equipment repair We will be glad to see you in
-        Kiev windsurfing club Windsurf!
-      </Typography>
-    </Container>
+      </Container>
+    </Box>
   );
 }
