@@ -10,7 +10,7 @@ import { Container } from '@mui/system';
 import images from './data';
 
 import { ImgBack } from './Hero.styled';
-import flag from '../../assets/flag.jpg';
+import flag from '../../assets/kavun.png';
 
 const Hero = () => {
   const el = useRef(null);

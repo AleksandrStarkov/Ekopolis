@@ -1,8 +1,11 @@
 import styled from '@emotion/styled';
 
 export const ImgClose = styled.img`
-  width: 150px;
-  height: 120px;
+  width: 130px;
+  height: 46px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   /* color: green; */
   /* margin-right: 100px; */
 `;

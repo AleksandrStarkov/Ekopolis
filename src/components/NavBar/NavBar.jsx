@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { AppBar, Typography, styled, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
-// import { ImgClose } from './NavBar.styled';
+import { ImgClose } from './NavBar.styled';
 
 import wind from '../../assets/logo3.png';
 import wind1 from '../../assets/logo4.png';
@@ -82,9 +82,16 @@ export default function NavBar() {
               backgroundSize: 'contain',
               textDecorationLine: 'none',
             }}
-            sx={{ display: { xs: 'none' } }}
+            // sx={{ xs: { display: 'none' } }}
           >
-            <img src={`${wind1}`} alt="" width="130px" height="50px" />
+            <ImgClose src={wind1} alt="" />
+            {/* <img
+              sx={{ xs: { display: 'none' } }}
+              src={`${wind1}`}
+              alt=""
+              width="130px"
+              height="50px"
+            /> */}
           </Link>
         </Container>
 

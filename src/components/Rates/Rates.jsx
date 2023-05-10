@@ -9,7 +9,8 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 // import Box from '@mui/material/Box';
 import { Box, Container, Typography } from '@mui/material';
-import BackImg2 from '../../assets/kherson.jpg';
+// import BackImg2 from '../../assets/kherson.jpg';
+import BackImg2 from '../../assets/clean2.jpg';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
