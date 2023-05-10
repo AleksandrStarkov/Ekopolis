@@ -1,30 +1,30 @@
-import { Box, styled, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 
 import BackImg2 from '../../assets/khersoncleanup.jpg';
 
 export default function About() {
-  const CustomBox = styled(Box)(({ theme }) => ({
-    display: 'flex',
-    justifyContent: 'center',
-    gap: theme.spacing(5),
-    marginTop: theme.spacing(3),
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
-      alignItems: 'center',
-      textAlign: 'center',
-    },
-  }));
+  // const CustomBox = styled(Box)(({ theme }) => ({
+  //   display: 'flex',
+  //   justifyContent: 'center',
+  //   gap: theme.spacing(5),
+  //   marginTop: theme.spacing(3),
+  //   [theme.breakpoints.down('md')]: {
+  //     flexDirection: 'column',
+  //     alignItems: 'center',
+  //     textAlign: 'center',
+  //   },
+  // }));
 
-  const Title = styled(Typography)(({ theme }) => ({
-    fontSize: '64px',
-    color: '#000336',
-    fontWeight: 'bold',
-    margin: theme.spacing(4, 0, 4, 0),
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '40px',
-    },
-  }));
+  // const Title = styled(Typography)(({ theme }) => ({
+  //   fontSize: '64px',
+  //   color: '#000336',
+  //   fontWeight: 'bold',
+  //   margin: theme.spacing(4, 0, 4, 0),
+  //   [theme.breakpoints.down('sm')]: {
+  //     fontSize: '40px',
+  //   },
+  // }));
 
   return (
     <Box

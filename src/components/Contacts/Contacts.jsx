@@ -10,7 +10,7 @@ export default function Activity() {
   return (
     <Box
       sx={{
-        backgroundImage: `url(${BackImg2})`,
+        // backgroundImage: `url(${BackImg2})`,
         backgroundImage: `linear-gradient(to right, rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)),url(${BackImg2})`,
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',

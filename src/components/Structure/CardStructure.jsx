@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+// import { CardActionArea } from '@mui/material';
 import Photo from '../../assets/logo.png';
 
 export default function CardStructure(props) {
