@@ -1,6 +1,6 @@
-import { createTheme, ThemeProvider } from '@mui/material';
+// import { createTheme, ThemeProvider } from '@mui/material';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import CssBaseline from '@mui/material/CssBaseline';
+// import CssBaseline from '@mui/material/CssBaseline';
 import React from 'react';
 
 import Hero from './Hero/Hero';
@@ -17,42 +17,43 @@ import Information from './Information/Information';
 import News from './News/News';
 import Contacts from './Contacts/Contacts';
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#ffffff',
-    },
-  },
-});
+// const darkTheme = createTheme({
+//   palette: {
+//     mode: 'light',
+//     primary: {
+//       main: '#ffffff',
+//     },
+//   },
+// });
 
 // color="primary" enableColorOnDark
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
+    <>
+      {/* <ThemeProvider theme={darkTheme}> */}
+      {/* <CssBaseline /> */}
       <NavBar />
-      {/* <TestNavBar /> */}
-      {/* <Header /> */}
       <Routes>
         {/* <Route path="/" element={<Hero />}> */}
         <Route path="/" element={<Hero />} />
-        <Route path="about" element={<About />} />
-        <Route path="activity" element={<Activity />} />
-        <Route path="management" element={<Management />} />
-        <Route path="structure" element={<Structure />} />
-        <Route path="vacancies" element={<Vacancies />} />
-        <Route path="agreement" element={<Agreement />} />
-        <Route path="population" element={<Population />} />
-        <Route path="rates" element={<Rates />} />
-        <Route path="information" element={<Information />} />
-        <Route path="contacts" element={<Contacts />} />
-        <Route path="news" element={<News />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/activity" element={<Activity />} />
+        <Route path="/management" element={<Management />} />
+        <Route path="/structure" element={<Structure />} />
+        <Route path="/vacancies" element={<Vacancies />} />
+        <Route path="/agreement" element={<Agreement />} />
+        <Route path="/population" element={<Population />} />
+        <Route path="/rates" element={<Rates />} />
+        <Route path="/information" element={<Information />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/news" element={<News />} />
         <Route path="*" element={<Navigate to="/" />} />
         {/* </Route> */}
       </Routes>
-    </ThemeProvider>
+
+      {/* </ThemeProvider> */}
+    </>
   );
 }
 
