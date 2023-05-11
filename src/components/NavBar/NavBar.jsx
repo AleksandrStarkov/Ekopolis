@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { AppBar, Typography, styled, Container } from '@mui/material';
+import LocalPhoneTwoToneIcon from '@mui/icons-material/LocalPhoneTwoTone';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import { Link } from 'react-router-dom';
 import { ImgClose } from './NavBar.styled';
 
@@ -16,6 +19,11 @@ export default function NavBar() {
     margin: theme.spacing(4, 0, 4, 0),
     [theme.breakpoints.down('sm')]: {
       fontSize: '40px',
+    },
+  }));
+  const DisLink = styled(Link)(({ theme }) => ({
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
     },
   }));
   return (
@@ -66,33 +74,62 @@ export default function NavBar() {
               Екополіс
             </Title>
           </Link>
-          <Link
-            to="https://miskrada.kherson.ua/"
-            style={{
-              display: 'flex',
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <DisLink
+              to="tel:+380123456789"
+              style={{ textDecoration: 'none', marginRight: '20px' }}
+            >
+              <Typography
+                variant="h3"
+                sx={{
+                  fontSize: '18px',
+                  color: '#030303',
 
-              // width: '130px',
-              // height: '50px',
-              background:
-                'linear-gradient(to bottom, #042EFF 0%, #FFFFff 50%, #FFFF09 100%)',
-              // backgroundImage: `url(${wind1})`,
-              backgroundRepeat: 'no-repeat',
+                  padding: '10px',
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+              >
+                <LocalPhoneTwoToneIcon style={{ marginRight: '10px' }} />
+                +380123456789
+              </Typography>
+              {/* <TelegramIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
+            </DisLink>
+            <DisLink>
+              <TelegramIcon style={{ marginRight: '10px', color: '#030303' }} />
+              {/* <FacebookIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
+            </DisLink>
+            <DisLink>
+              {/* <TelegramIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
+              <FacebookIcon style={{ marginRight: '10px', color: '#030303' }} />
+            </DisLink>
+            <Link
+              to="https://miskrada.kherson.ua/"
+              style={{
+                display: 'flex',
 
-              backgroundPosition: 'center',
-              backgroundSize: 'contain',
-              textDecorationLine: 'none',
-            }}
-            // sx={{ xs: { display: 'none' } }}
-          >
-            <ImgClose src={wind1} alt="" />
-            {/* <img
+                // width: '130px',
+                // height: '50px',
+                background:
+                  'linear-gradient(to bottom, #042EFF 0%, #FFFFff 50%, #FFFF09 100%)',
+
+                backgroundRepeat: 'no-repeat',
+
+                backgroundPosition: 'center',
+                backgroundSize: 'contain',
+                textDecorationLine: 'none',
+              }}
+            >
+              <ImgClose src={wind1} alt="" />
+              {/* <img
               sx={{ xs: { display: 'none' } }}
               src={`${wind1}`}
               alt=""
               width="130px"
               height="50px"
             /> */}
-          </Link>
+            </Link>
+          </div>
         </Container>
 
         <Header />

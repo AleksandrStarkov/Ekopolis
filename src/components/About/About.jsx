@@ -46,7 +46,7 @@ export default function Activity() {
             padding: '30px',
             // boxShadow: '0px 4px 20px #d0d7de',
             borderRadius: '12px',
-            maxWidth: '700px',
+            // maxWidth: '700px',
           }}
         >
           КОМУНАЛЬНЕ ПІДПРИЄМСТВО «ЕКОПОЛІС» ХЕРСОНСЬКОЇ МІСЬКОЇ РАДИ засноване

@@ -5,6 +5,7 @@ import BackImg2 from '../../assets/DJI_0610-328.jpg';
 import PinDropTwoToneIcon from '@mui/icons-material/PinDropTwoTone';
 import MailTwoToneIcon from '@mui/icons-material/MailTwoTone';
 import CalendarMonthTwoToneIcon from '@mui/icons-material/CalendarMonthTwoTone';
+import LocalPhoneTwoToneIcon from '@mui/icons-material/LocalPhoneTwoTone';
 
 export default function Activity() {
   return (
@@ -105,6 +106,22 @@ export default function Activity() {
             <CalendarMonthTwoToneIcon style={{ marginRight: '10px' }} />
             понеділок-четвер з 8.00 до 17.00 (перерва з 12.00 до 12.45) п’ятниця
             з 8.00 до 15.45 (перерва з 12:00 до 12:45)
+          </Typography>
+          <Typography
+            variant="h3"
+            sx={{
+              fontSize: '18px',
+              color: '#030303',
+              // background: '#ffffffde',
+              // boxShadow: '0px 4px 20px #d0d7de',
+              // borderRadius: '12px',
+              padding: '10px',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <LocalPhoneTwoToneIcon style={{ marginRight: '10px' }} />
+            +380123456789
           </Typography>
         </Box>
       </Container>
