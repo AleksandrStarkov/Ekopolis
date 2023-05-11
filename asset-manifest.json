@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ekopolis/static/css/main.7acaea2f.css",
-    "main.js": "/Ekopolis/static/js/main.f5d1490f.js",
+    "main.js": "/Ekopolis/static/js/main.b3004e4b.js",
     "static/media/khersoncleanup.jpg": "/Ekopolis/static/media/khersoncleanup.d34a4aab7509f9e6d0b1.jpg",
     "static/media/clean1.jpg": "/Ekopolis/static/media/clean1.d69fd853a079b18a2451.jpg",
     "static/media/clean2.jpg": "/Ekopolis/static/media/clean2.55111ef7d77288be7de4.jpg",
@@ -13,10 +13,10 @@
     "static/media/logo4.png": "/Ekopolis/static/media/logo4.f01cfcd8790826d229cc.png",
     "index.html": "/Ekopolis/index.html",
     "main.7acaea2f.css.map": "/Ekopolis/static/css/main.7acaea2f.css.map",
-    "main.f5d1490f.js.map": "/Ekopolis/static/js/main.f5d1490f.js.map"
+    "main.b3004e4b.js.map": "/Ekopolis/static/js/main.b3004e4b.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.f5d1490f.js"
+    "static/js/main.b3004e4b.js"
   ]
 }
