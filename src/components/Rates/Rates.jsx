@@ -19,6 +19,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
+    // width: '54px',
   },
 }));
 
@@ -32,51 +33,72 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(name, calories) {
-  return { name, calories };
+function createData(name, calories, number) {
+  return { name, calories, number };
 }
 
 const rows = [
-  createData('Промислові відходи  ІV класу небезпеки:'),
+  // createData('1.Промислові відходи  ІV кл. небезпеки '),
+  createData('Сортовані побутові відходи ', '124,00', 'ТПВ 1.1'),
   createData(
-    '1.Одяг захисний зіпсований, відпрацьований чи забруднений',
+    'Вуличний змет (відходи комунальні, одержані в процесі очищення вулиць, місць загального використання)',
     '124,00',
+    'ТПВ 1.2',
   ),
   createData(
-    '2.Полімери синтетичні, забруднені або не ідентифіковані, які не можуть бути використані за призначенням (пінопласт)',
-    '162,00',
-  ),
-  createData('3.Тирса деревинна, відходи деревини', '162,00'),
-  createData('4.Обрізки склотканини (скловата, мінвата)', '162,00'),
-  createData('5.Залишки зернові від очищення  зерна', '140,00'),
-  createData('6.Продукти харчування інші некондиційні', '124,00'),
-  createData(
-    '7.Овочі, фрукти зіпсовані або не ідентифіковані , їх залишки, які не можуть бути використані за призначенням',
+    'Відходи зеленого господарства (трава, листя, гілки від насаджень, одержані в процесі очищення місць загального використання) ',
     '124,00',
+    'ТПВ 1.3',
   ),
-  createData('8.Мулові відходи очисних споруд', '162,00'),
-  createData(
-    '9.Відходи змішані будівництва, знесення будівель і споруд',
-    '124,00',
-  ),
-  createData(
-    '10.Матеріали пакувальні змішані, зіпсовані, відпрацьовані чи забруднені (непридатні для утилізації)',
-    '190,00',
-  ),
-  createData('Промислові відходи ІII класу небезпеки:', '162,00'),
-  createData('1.Залишки шкіри вичиненої', '236,00'),
+  createData('Великогабаритні  побутові відходи', '124,00', 'ТПВ 1.4'),
+  createData('Ремонтні побутові відходи', '124,00', 'ТПВ 1.5'),
 ];
 
 const row = [
-  createData('Промислові відходи  ІV класу небезпеки:'),
+  // createData('2.Промислові відходи  ІV кл. небезпеки '),
   createData(
-    '1.Вуличний змет (відходи комунальні, одержані в процесі очищення вулиць, місць загального використання)',
+    'Одяг захисний зіпсований, відпрацьований чи забруднений',
     '124,00',
+    'ПВ 2.1',
   ),
   createData(
-    '2.Відходи зеленого господарства (трава, листя, гілки від насаджень, одержані в процесі очищення місць загального використання)',
-    '124,00',
+    'Полімери синтетичні, забруднені або не ідентифіковані, які не можуть бути використані за призначенням (пінопласт)',
+    '162,00',
+    'ПВ 2.2',
   ),
+  createData('Тирса деревинна, відходи деревини', '162,00', 'ПВ 2.3'),
+  createData('Обрізки склотканини (скловата, мінвата)', '162,00', 'ПВ 2.4'),
+  createData('Залишки зернові від очищення  зерна', '140,00', 'ПВ 2.5'),
+  createData('Продукти харчування інші некондиційні', '124,00', 'ПВ 2.6'),
+  createData(
+    'Овочі, фрукти зіпсовані або не ідентифіковані , їх залишки, які не можуть бути використані за призначенням',
+    '124,00',
+    'ПВ 2.7',
+  ),
+  createData('Мулові відходи очисних споруд', '162,00', 'ПВ 2.8'),
+  createData(
+    'Відходи змішані будівництва, знесення будівель і споруд',
+    '124,00',
+    'ПВ 2.9',
+  ),
+  createData(
+    'Матеріали пакувальні змішані, зіпсовані, відпрацьовані чи забруднені (непридатні для утилізації)',
+    '190,00',
+    'ПВ 2.10',
+  ),
+  // createData('Промислові відходи  ІV класу небезпеки:'),
+  // createData(
+  //   '1.Вуличний змет (відходи комунальні, одержані в процесі очищення вулиць, місць загального використання)',
+  //   '124,00',
+  // ),
+  // createData(
+  //   '2.Відходи зеленого господарства (трава, листя, гілки від насаджень, одержані в процесі очищення місць загального використання)',
+  //   '124,00',
+  // ),
+];
+const rowse = [
+  // createData('3.Промислові відходи  ІII кл. небезпеки:'),
+  createData('Залишки шкіри вичиненої', '236,00', 'ПВ 3.1'),
 ];
 
 export default function CustomizedTables() {
@@ -108,7 +130,7 @@ export default function CustomizedTables() {
         <Typography
           variant="body2"
           sx={{
-            fontSize: '17px',
+            fontSize: '28px',
             color: '#030303',
             background: '#ffffffde',
             maxWidth: '700px',
@@ -118,22 +140,29 @@ export default function CustomizedTables() {
             marginBottom: '20px',
           }}
         >
-          Вартість послуг по захороненню промислових відходів III-IV класів
-          небезпеки
+          Назва відходів
         </Typography>
         <TableContainer component={Paper} sx={{ maxWidth: 700 }}>
           <Table sx={{ maxWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow style={{ backgroundColor: 'grey' }}>
-                <StyledTableCell>Назва відходів</StyledTableCell>
-                <StyledTableCell align="right">
-                  Вартість послуги з ПДВ гривень/1 тонна
+                <StyledTableCell>Код</StyledTableCell>
+                <StyledTableCell style={{ textAlign: 'center' }}>
+                  1.Тверді побутові відходи
                 </StyledTableCell>
+                <StyledTableCell align="right">ЦІНА</StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {rows.map(row => (
                 <StyledTableRow key={row.name}>
+                  <StyledTableCell
+                    component="th"
+                    scope="row"
+                    style={{ width: '54px' }}
+                  >
+                    {row.number}
+                  </StyledTableCell>
                   <StyledTableCell component="th" scope="row">
                     {row.name}
                   </StyledTableCell>
@@ -145,7 +174,7 @@ export default function CustomizedTables() {
             </TableBody>
           </Table>
         </TableContainer>
-        <Typography
+        {/* <Typography
           variant="body2"
           sx={{
             fontSize: '17px',
@@ -161,20 +190,60 @@ export default function CustomizedTables() {
         >
           Вартість послуг по захороненню відходів зеленого господарства,
           вуличного змету
-        </Typography>
+        </Typography> */}
         <TableContainer component={Paper} sx={{ maxWidth: 700 }}>
           <Table sx={{ maxWidth: 700 }} aria-label="customized table">
             <TableHead>
               <TableRow style={{ backgroundColor: 'grey' }}>
-                <StyledTableCell>Назва відходів</StyledTableCell>
-                <StyledTableCell align="right">
-                  Вартість послуги з ПДВ гривень/1 тонна
+                <StyledTableCell>Код</StyledTableCell>
+                <StyledTableCell style={{ textAlign: 'center' }}>
+                  2.Промислові відходи ІV кл. небезпеки
                 </StyledTableCell>
+                <StyledTableCell align="right">ЦІНА</StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {row.map(row => (
                 <StyledTableRow key={row.name}>
+                  <StyledTableCell
+                    component="th"
+                    scope="row"
+                    style={{ width: '54px' }}
+                  >
+                    {row.number}
+                  </StyledTableCell>
+                  <StyledTableCell component="th" scope="row">
+                    {row.name}
+                  </StyledTableCell>
+                  <StyledTableCell align="right">
+                    {row.calories}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <TableContainer component={Paper} sx={{ maxWidth: 700 }}>
+          <Table sx={{ maxWidth: 700 }} aria-label="customized table">
+            <TableHead>
+              <TableRow style={{ backgroundColor: 'grey' }}>
+                <StyledTableCell>Код</StyledTableCell>
+                <StyledTableCell style={{ textAlign: 'center' }}>
+                  3.Промислові відходи ІII кл. небезпеки:
+                </StyledTableCell>
+                <StyledTableCell align="right">ЦІНА</StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rowse.map(row => (
+                <StyledTableRow key={row.name}>
+                  <StyledTableCell
+                    component="th"
+                    scope="row"
+                    style={{ width: '54px' }}
+                  >
+                    {row.number}
+                  </StyledTableCell>
                   <StyledTableCell component="th" scope="row">
                     {row.name}
                   </StyledTableCell>

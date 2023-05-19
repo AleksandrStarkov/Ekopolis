@@ -9,9 +9,15 @@ import {
   AccordionDetails,
   AccordionSummary,
   Typography,
+  styled,
 } from '@mui/material';
+import LocalPhoneTwoToneIcon from '@mui/icons-material/LocalPhoneTwoTone';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import { ImgClose } from '../NavBar.styled';
+import wind1 from '../../../assets/logo4.png';
 import { Link } from 'react-router-dom';
 
 const DrawerComp = () => {
@@ -21,7 +27,11 @@ const DrawerComp = () => {
   const handleChange = panel => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
-
+  const DisLink = styled(Link)(({ theme }) => ({
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  }));
   return (
     <React.Fragment>
       <Drawer
@@ -385,6 +395,60 @@ const DrawerComp = () => {
             КОНТАКТИ
           </Button>
         </div>
+        <Link
+          to="https://miskrada.kherson.ua/"
+          style={{
+            display: 'flex',
+
+            // width: '130px',
+            // height: '50px',
+            background:
+              'linear-gradient(to bottom, #042EFF 0%, #FFFFff 50%, #FFFF09 100%)',
+
+            backgroundRepeat: 'no-repeat',
+
+            backgroundPosition: 'center',
+            backgroundSize: 'contain',
+            textDecorationLine: 'none',
+          }}
+        >
+          {/* <ImgClose src={wind1} alt="" /> */}
+          <img
+            sx={{ xs: { display: 'none' } }}
+            src={`${wind1}`}
+            alt=""
+            width="130px"
+            height="50px"
+          />
+        </Link>
+        <DisLink
+          to="tel:+380123456789"
+          style={{ textDecoration: 'none', marginRight: '20px' }}
+        >
+          <Typography
+            variant="h3"
+            sx={{
+              fontSize: '18px',
+              color: '#030303',
+
+              padding: '10px',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <LocalPhoneTwoToneIcon style={{ marginRight: '10px' }} />
+            +380123456789
+          </Typography>
+          {/* <TelegramIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
+        </DisLink>
+        <DisLink>
+          <TelegramIcon style={{ marginRight: '10px', color: '#030303' }} />
+          {/* <FacebookIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
+        </DisLink>
+        <DisLink>
+          {/* <TelegramIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
+          <FacebookIcon style={{ marginRight: '10px', color: '#030303' }} />
+        </DisLink>
       </Drawer>
       <IconButton
         sx={{ color: 'black', marginLeft: 'auto' }}
