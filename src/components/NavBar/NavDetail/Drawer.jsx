@@ -28,7 +28,7 @@ const DrawerComp = () => {
     setExpanded(isExpanded ? panel : false);
   };
   const DisLink = styled(Link)(({ theme }) => ({
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
   }));
