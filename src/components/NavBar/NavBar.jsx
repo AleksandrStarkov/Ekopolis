@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { AppBar, Typography, styled, Container } from '@mui/material';
 import LocalPhoneTwoToneIcon from '@mui/icons-material/LocalPhoneTwoTone';
-import TelegramIcon from '@mui/icons-material/Telegram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+// import TelegramIcon from '@mui/icons-material/Telegram';
+// import FacebookIcon from '@mui/icons-material/Facebook';
+import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone';
 import { Link } from 'react-router-dom';
 import { ImgClose } from './NavBar.styled';
 
@@ -91,17 +92,21 @@ export default function NavBar() {
                 }}
               >
                 <LocalPhoneTwoToneIcon style={{ marginRight: '10px' }} />
-                +380123456789
+                +380957491669
               </Typography>
               {/* <TelegramIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
             </DisLink>
-            <DisLink>
-              <TelegramIcon style={{ marginRight: '10px', color: '#030303' }} />
-              {/* <FacebookIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
-            </DisLink>
-            <DisLink>
+            {/* <DisLink> */}
+            {/* <TelegramIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
+            {/* <FacebookIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
+            {/* </DisLink> */}
+            <DisLink to="kpekopolis@gmail.com">
               {/* <TelegramIcon style={{ marginRight: '10px', color: '#030303' }} /> */}
-              <FacebookIcon style={{ marginRight: '10px', color: '#030303' }} />
+              <EmailTwoToneIcon
+                style={{ marginRight: '30px', color: '#030303' }}
+              />
+              {/* import EmailTwoToneIcon from '@mui/icons-material/EmailTwoTone'; */}
+              {/* kpekopolis@gmail.com */}
             </DisLink>
             <Link
               to="https://miskrada.kherson.ua/"

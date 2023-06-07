@@ -72,7 +72,7 @@ export default function Activity() {
             }}
           >
             <PinDropTwoToneIcon style={{ marginRight: '10px' }} />
-            04053, м. Київ, вул. Кудрявська, 23.
+            Украина, місто Херсон, ПРОСПЕКТ УШАКОВА, будинок 37, 73000
           </Typography>
           <Typography
             variant="h4"
@@ -88,7 +88,7 @@ export default function Activity() {
             }}
           >
             <MailTwoToneIcon style={{ marginRight: '10px' }} />
-            info@kks.kiev.ua
+            kpekopolis@gmail.com
           </Typography>
           <Typography
             variant="h5"
@@ -104,8 +104,7 @@ export default function Activity() {
             }}
           >
             <CalendarMonthTwoToneIcon style={{ marginRight: '10px' }} />
-            понеділок-четвер з 8.00 до 17.00 (перерва з 12.00 до 12.45) п’ятниця
-            з 8.00 до 15.45 (перерва з 12:00 до 12:45)
+            понеділок- п’ятниця з 9.00 до 18.00 (перерва з 12.00 до 13.00)
           </Typography>
           <Typography
             variant="h3"
@@ -121,7 +120,7 @@ export default function Activity() {
             }}
           >
             <LocalPhoneTwoToneIcon style={{ marginRight: '10px' }} />
-            +380123456789
+            +380957491669
           </Typography>
         </Box>
       </Container>
